@@ -1,0 +1,35 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+
+{% if latest_blog_list %}
+    {% for post in latest_blog_list %}
+        <h2><a href="/{{ post.id }}/">{{ post.title }}</a></h2>
+        {{ post.body_html }}
+    {% endfor %}
+{% else %}
+    <p>No posts here.</p>
+{% endif %}
+
+{% if is_paginated %}
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ page_obj.number }} of {{ paginator.num_pages }}.
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">next</a>
+            {% endif %}
+        </span>
+    </div>
+{% endif %}
+
+{% endblock %}
+

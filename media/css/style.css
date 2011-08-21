@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+}
+
+#container {
+  width: 650px;
+  margin: 0 auto;
+}
+
+nav {
+  margin-top: 100px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  float: right;
+  margin-right: 30px;
+}
+
+nav ul:last-child {
+  margin-right: 0px;
+}
+
+nav ul li a {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+

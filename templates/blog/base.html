@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/media/css/style.css" />
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </nav>
+            <h1>A Wade Foster Production</h1>
+            <p class="tag">Spewings of a newbie developer</p>
+        </header>
+        <div id="main" role="main">
+            {% block content %}{% endblock %}
+        </div>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>
+
