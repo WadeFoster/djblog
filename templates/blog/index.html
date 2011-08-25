@@ -6,8 +6,8 @@
 
 {% if latest_blog_list %}
     {% for post in latest_blog_list %}
-        <h2><a href="/{{ post.id }}/">{{ post.title }}</a></h2>
-        {{ post.body_html }}
+        <h2><a href="{% url view_post post.slug %}">{{ post.title }}</a></h2>
+        {{ post.body_html|safe }}
     {% endfor %}
 {% else %}
     <p>No posts here.</p>

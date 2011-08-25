@@ -34,15 +34,6 @@ class Post(models.Model):
     def __unicode__(self):
         return u'%s' % self.title
 
-    @models.permalink
-    def get_absolute_url(self):
-        y = self.entry_date.strftime('%Y')
-        m = self.entry_date.strftime('%b').lower()
-        d = self.entry_date.strftime('%d')
-
-        return ('blog_entry_detail', None, { 'year': y,
-            'month': m, 'day': d, 'slug': self.slug })
-
     class Meta:
         ordering = ['-pub_date']
         get_latest_by = 'pub_date'

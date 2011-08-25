@@ -102,7 +102,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'taketwo.urls'
+ROOT_URLCONF = 'djblog.urls'
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates')
